@@ -12,7 +12,6 @@ use App\Models\LatestInfo;
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/galeri', [AlbumController::class, 'showGallery'])->name('galeri');
 Route::get('/album/{id}', [AlbumController::class, 'viewAlbum'])->name('albums.view');
 Route::get('info/rencanakegiatan', [ActivityPlanController::class, 'showActivityPlans'])->name('rencanakegiatan');
