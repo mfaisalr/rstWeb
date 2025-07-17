@@ -93,45 +93,44 @@
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/profile">Profile</a></li>
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/sejarah">Sejarah</a></li>
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/strukturorganisasi">Struktur Organisasi</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/maklumatpelayanan">Maklumat Pelayanan</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/standarpelayanan">Standar Pelayanan</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
 											<a href="gallery.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Info</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="gallery.html">Creative Gallery</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Simple Gallery</a></li>
+												<li><a class="dropdown-item" href="{{ route('rencanakegiatan') }}">Rencana Kegiatan</a></li>
+												<li><a class="dropdown-item" href="{{ route('infoterkini') }}">Info Terkini</a></li>
+												<li><a class="dropdown-item" href="{{ route('infolayanan') }}">Info Layanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Fasilitas</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="our-specialist.html">All Specialists</a></li>
-												<li><a class="dropdown-item" href="doctor-page.html">Doctor Page</a></li>
-												<li><a class="dropdown-item" href="schedule.html">Schedule Table</a></li>
+												<li><a class="dropdown-item" href="{{ route('fasilitaspelayanan') }}">Fasilitas Pelayanan</a></li>
+												<li><a class="dropdown-item" href="{{ route('fasilitasinstalasi') }}">Fasilitas Instalasi</a></li>
+												<li><a class="dropdown-item" href="{{ route('unggulan') }}">Unggulan</a></li>
 											</ul>
-										</li>										<li class="nav-item">
-											<a class="nav-link" href="testimonials.html">Galeri</a>
-										</li>
-										<li class="nav-item dropdown">
-											<a href="blog.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Akreditasi</a>
-											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="blog.html">Blog Posts</a></li>
-												<li><a class="dropdown-item" href="blog-grid.html">Blog Grid Posts</a></li>
-												<li><a class="dropdown-item" href="blog-post-page.html">Blog Single Post</a></li>
-											</ul>
+										</li>										
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('galeri') }}">Galeri</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="contact.html">PPID</a>
+											<a class="nav-link" href="{{ route('akreditasi') }}">Akreditasi</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('ppid') }}">PPID</a>
 										</li>
                                         <li class="nav-item">
-											<a class="nav-link" href="contact.html">WBS</a>
+											<a class="nav-link" href="{{ route('wbs') }}">WBS</a>
 										</li>
-                                        <li class="nav-item">
-											<a class="nav-link" href="contact.html">WBK/WBBM</a>
+                                      	<li class="nav-item">
+											<a class="nav-link" href="{{ route('wbkwbbm') }}">WBK/WBBM</a>
 										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('login') }}" style="color: #49b0c1;">Login</a>
+										</li>
+									</ul>
 								</div>
 							</nav>
 						</div>
@@ -198,10 +197,8 @@
 							<ul class="categories-list">
 								<li><a href="../../../tentang_kami/detail/profile">Profile</a></li>
 								<li><a href="../../../tentang_kami/detail/sejarah">Sejarah</a></li>
-								<li><a href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>
-								<li><a href="../../../tentang_kami/detail/strukturorganisasi">Struktur Organisasi</a></li>
-								<li><a href="../../../tentang_kami/detail/maklumatpelayanan">Maklumat Pelayanan</a></li>
-								<li><a href="../../../tentang_kami/detail/standarpelayanan">Standar Pelayanan</a></li>
+								<li><a href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>								
+								<li><a href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></li>
 							</ul>
 						</div>
 					</div>
@@ -210,6 +207,7 @@
 		</div>
 		<!--//section-->
 	</div>
+	<br><br>
 	<!--footer-->
 	<div class="footer mt-0">
 		<div class="container">

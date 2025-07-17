@@ -27,13 +27,17 @@ Route::get('/wbs', [ReportController::class, 'createGratifikasi'])->name('wbs');
 Route::post('/wbs', [ReportController::class, 'storeGratifikasi'])->name('wbs');
 Route::get('/wbs', [ReportController::class, 'createBenturanKepentingan'])->name('wbs');
 Route::post('/wbs', [ReportController::class, 'storeBenturanKepentingan'])->name('wbs');
+
+Route::view('/ppid', 'ppid')->name('ppid');
+Route::view('/wbkwbbm', 'wbkwbbm')->name('wbkwbbm');
+Route::view('/akreditasi', 'akreditasi')->name('akreditasi');
+
 // About Us Routes
 Route::prefix('tentang_kami/detail')->group(function () {
     Route::view('/profile', 'profile')->name('profile');
     Route::view('/sejarah', 'sejarah')->name('sejarah');
     Route::view('/visimisi', 'visimisi')->name('visimisi');
-    Route::view('/strukturorganisasi', 'strukturorganisasi')->name('strukturorganisasi');
-    Route::view('/strukturpelayanan', 'strukturpelayanan')->name('strukturpelayanan');
+    Route::view('/waktupelayanan', 'waktupelayanan')->name('waktupelayanan');
 });
 
 Route::prefix('info')->group(function () {
@@ -104,7 +108,3 @@ Route::middleware(['auth'])->group(function () {
 
 // Auth Routes
 require __DIR__.'/auth.php';
-Route::get('/migrate', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return 'Migrasi sukses!';
-});

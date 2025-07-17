@@ -93,45 +93,44 @@
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/profile">Profile</a></li>
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/sejarah">Sejarah</a></li>
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/strukturorganisasi">Struktur Organisasi</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/maklumatpelayanan">Maklumat Pelayanan</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/standarpelayanan">Standar Pelayanan</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
 											<a href="gallery.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Info</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="gallery.html">Creative Gallery</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Simple Gallery</a></li>
+												<li><a class="dropdown-item" href="{{ route('rencanakegiatan') }}">Rencana Kegiatan</a></li>
+												<li><a class="dropdown-item" href="{{ route('infoterkini') }}">Info Terkini</a></li>
+												<li><a class="dropdown-item" href="{{ route('infolayanan') }}">Info Layanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Fasilitas</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="our-specialist.html">All Specialists</a></li>
-												<li><a class="dropdown-item" href="doctor-page.html">Doctor Page</a></li>
-												<li><a class="dropdown-item" href="schedule.html">Schedule Table</a></li>
+												<li><a class="dropdown-item" href="{{ route('fasilitaspelayanan') }}">Fasilitas Pelayanan</a></li>
+												<li><a class="dropdown-item" href="{{ route('fasilitasinstalasi') }}">Fasilitas Instalasi</a></li>
+												<li><a class="dropdown-item" href="{{ route('unggulan') }}">Unggulan</a></li>
 											</ul>
-										</li>										<li class="nav-item">
-											<a class="nav-link" href="testimonials.html">Galeri</a>
-										</li>
-										<li class="nav-item dropdown">
-											<a href="blog.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Akreditasi</a>
-											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="blog.html">Blog Posts</a></li>
-												<li><a class="dropdown-item" href="blog-grid.html">Blog Grid Posts</a></li>
-												<li><a class="dropdown-item" href="blog-post-page.html">Blog Single Post</a></li>
-											</ul>
+										</li>										
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('galeri') }}">Galeri</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="contact.html">PPID</a>
+											<a class="nav-link" href="{{ route('akreditasi') }}">Akreditasi</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('ppid') }}">PPID</a>
 										</li>
                                         <li class="nav-item">
-											<a class="nav-link" href="contact.html">WBS</a>
+											<a class="nav-link" href="{{ route('wbs') }}">WBS</a>
 										</li>
-                                        <li class="nav-item">
-											<a class="nav-link" href="contact.html">WBK/WBBM</a>
+                                      	<li class="nav-item">
+											<a class="nav-link" href="{{ route('wbkwbbm') }}">WBK/WBBM</a>
 										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('login') }}" style="color: #49b0c1;">Login</a>
+										</li>
+									</ul>
 								</div>
 							</nav>
 						</div>
@@ -149,7 +148,7 @@
 					<div class="breadcrumbs">
 						<a href="/">Beranda</a>
 						<a href="#" style="pointer-events: none; text-decoration: none;">Tentang Kami</a>
-						<span>Profile</span>
+						<span>Waktu Pelayanan</span>
 					</div>
 				</div>
 			</div>
@@ -164,14 +163,26 @@
 							<div class="blog-post">
 								<div class="blog-post-info">
 									<div>
-										<h2 class="post-title"><a href="../../../tentang_kami/detail/profile">Profile</a></h2>
+										<h2 class="post-title"><a href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></h2>
 									</div>
 								</div>
-								<div class="post-image">
-									<a href="blog-post-page.html"><img src="../../../images/blog/profile-img.png" alt=""></a>
-								</div>
-								<div class="post-teaser">RS Dr. R. Hardjanto sebagai Rumah Sakit TNI AD di wilayah Kalimantan Timur dengan tugas pokok memberikan Yankes dan Dukkes. Yankes ditujukan kepada prajurit & PNS serta keluarganya. Sedangkan Dukkes ditujukan kepada prajurit dalam pelaksana operasi tempur maupun latihan.</div>
-								<div class="mt-3 mt-lg-4"><a href="../../../blog-post-page.html" class="btn btn-sm btn-hover-fill"><i class="icon-right-arrow"></i><span>Read more</span><i class="icon-right-arrow"></i></a></div>
+								<p>
+                                    <b>Pelayanan Poliklinik</b>
+                                    <br>
+                                    Senin - Jumat : 07.00 - 15.00
+                                    <br>
+                                    Sabtu - Minggu : Tutup
+                                </p>
+                                <p>
+                                    <b>IGD</b>
+                                    <br>
+                                    24 Jam
+                                </p>
+                                <p>
+                                    <b>Telepon</b>
+                                    <br>
+                                    (0542) 414333 / FAX (0542) 415677
+                                </p>
 							</div>
 						</div>
 					</div>
@@ -190,9 +201,7 @@
 								<li><a href="../../../tentang_kami/detail/profile">Profile</a></li>
 								<li><a href="../../../tentang_kami/detail/sejarah">Sejarah</a></li>
 								<li><a href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>
-								<li><a href="../../../tentang_kami/detail/strukturorganisasi">Struktur Organisasi</a></li>
-								<li><a href="../../../tentang_kami/detail/maklumatpelayanan">Maklumat Pelayanan</a></li>
-								<li><a href="../../../tentang_kami/detail/standarpelayanan">Standar Pelayanan</a></li>
+								<li><a href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></li>
 							</ul>
 						</div>
 					</div>
@@ -201,6 +210,7 @@
 		</div>
 		<!--//section-->
 	</div>
+    <br><br><br>
 	<!--footer-->
 	<div class="footer mt-0">
 		<div class="container">
@@ -265,7 +275,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4">
-					<h3>Our Contacts</h3>
+					<h3>Kontak Kami</h3>
 					<div class="h-decor"></div>
 					<ul class="icn-list">
 						<li><i class="icon-placeholder2"></i>Jl. Tanjungpura I, Klandasan Ulu, Balikpapan, Kalimantan Timur  76111 

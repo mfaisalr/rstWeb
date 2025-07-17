@@ -170,17 +170,16 @@ h5.fw-semibold {
 							<nav class="navbar navbar-expand-lg btco-hover-menu">
 								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 									<ul class="navbar-nav">
-                                    <li class="nav-item">
+										<li class="nav-item">
 											<a class="nav-link" href="/">Beranda</a>
 										</li>
 										<li class="nav-item">
 											<a href="services.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
-												<li><a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah</a></li>
-												<li><a class="dropdown-item" href="{{ route('visimisi') }}">Visi dan Misi</a></li>
-												<li><a class="dropdown-item" href="{{ route('strukturorganisasi') }}">Struktur Organisasi</a></li>
-												<li><a class="dropdown-item" href="{{ route('strukturpelayanan') }}">Struktur Pelayanan</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/profile">Profile</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/sejarah">Sejarah</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
@@ -198,25 +197,26 @@ h5.fw-semibold {
 												<li><a class="dropdown-item" href="{{ route('fasilitasinstalasi') }}">Fasilitas Instalasi</a></li>
 												<li><a class="dropdown-item" href="{{ route('unggulan') }}">Unggulan</a></li>
 											</ul>
-										</li>
+										</li>										
 										<li class="nav-item">
 											<a class="nav-link" href="{{ route('galeri') }}">Galeri</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="">Akreditasi</a>
+											<a class="nav-link" href="{{ route('akreditasi') }}">Akreditasi</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="">PPID</a>
+											<a class="nav-link" href="{{ route('ppid') }}">PPID</a>
 										</li>
                                         <li class="nav-item">
-											<a class="nav-link" href="">WBS</a>
+											<a class="nav-link" href="{{ route('wbs') }}">WBS</a>
 										</li>
                                       	<li class="nav-item">
-											<a class="nav-link" href="contact.html">WBK/WBBM</a>
+											<a class="nav-link" href="{{ route('wbkwbbm') }}">WBK/WBBM</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link" href="{{ route('login') }}" style="color: #49b0c1;">Login</a>
 										</li>
+									</ul>
 								</div>
 							</nav>
 						</div>

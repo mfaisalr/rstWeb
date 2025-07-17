@@ -67,7 +67,7 @@
 					<div class="col-3">
 						<div class="header-mobile-info-toggle js-info-toggle"></div>
 					</div>
-					<div class="col-auto header-button-wrap ml-auto"><a href="#" class="btn" data-toggle="modal" data-target="#modalBookingForm"><i class="icon-right-arrow"></i>APPOINTMENT<i class="icon-right-arrow"></i></a></div>
+					<!-- <div class="col-auto header-button-wrap ml-auto"><a href="#" class="btn" data-toggle="modal" data-target="#modalBookingForm"><i class="icon-right-arrow"></i>APPOINTMENT<i class="icon-right-arrow"></i></a></div> -->
 				</div>
 			</div>
 		</div>
@@ -113,8 +113,7 @@
 												<li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
 												<li><a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah</a></li>
 												<li><a class="dropdown-item" href="{{ route('visimisi') }}">Visi dan Misi</a></li>
-												<li><a class="dropdown-item" href="{{ route('strukturorganisasi') }}">Struktur Organisasi</a></li>
-												<li><a class="dropdown-item" href="{{ route('strukturpelayanan') }}">Struktur Pelayanan</a></li>
+												<li><a class="dropdown-item" href="{{ route('waktupelayanan') }}">Waktu Pelayanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
@@ -137,16 +136,16 @@
 											<a class="nav-link" href="{{ route('galeri') }}">Galeri</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="testimonials.html">Akreditasi</a>
+											<a class="nav-link" href="{{ route('akreditasi') }}">Akreditasi</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="contact.html">PPID</a>
+											<a class="nav-link" href="{{ route('ppid') }}">PPID</a>
 										</li>
                                         <li class="nav-item">
 											<a class="nav-link" href="{{ route('wbs') }}">WBS</a>
 										</li>
                                       	<li class="nav-item">
-											<a class="nav-link" href="contact.html">WBK/WBBM</a>
+											<a class="nav-link" href="{{ route('wbkwbbm') }}">WBK/WBBM</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link" href="{{ route('login') }}" style="color: #49b0c1;">Login</a>
@@ -176,7 +175,7 @@
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
 											<br><b>Selamat Datang !</b></div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Website RUMAH SAKIT TK. II DR. R. HARDJANTO kini hadir dengan penampilan baru yang semoga dapat lebih efektif dalam memberikan informasi.</div>
-										<div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Know more</span><i class="icon-right-arrow"></i></a></div>
+										<div class="slide-btn"><a href="{{ route('profile') }}" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Know more</span><i class="icon-right-arrow"></i></a></div>
 									</div>
 								</div>
 							</div>
@@ -191,7 +190,7 @@
 										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
 											<br><b>Senyumku membawa kesembuhan untukmu.</b></div>
 										<div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Mengembangkan berbagai inovasi untuk meningkatkan pelayanan kepada para pasien.</div>
-										<div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Know more</span><i class="icon-right-arrow"></i></a></div>
+										<div class="slide-btn"><a href="{{ route('profile') }}" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Know more</span><i class="icon-right-arrow"></i></a></div>
 									</div>
 								</div>
 							</div>
@@ -214,7 +213,7 @@
 							<h2 class="h1">RS <span class="theme-color"> TK.II Dr. R. Hardjanto</span></h2>
 						</div>
 						<div class="row">
-							<div class="d-lg-none col-8 col-sm-6 col-lg-5 mx-auto"><img src="images/content/surgery-index-01.jpg" alt="" class="img-fluid"></div>
+							<div class="d-lg-none col-8 col-sm-6 col-lg-5 mx-auto"><img src="images/content/rstimg2.jpg" alt="" class="img-fluid"></div>
 							<div class="col-sm">
 								<div class="title-wrap text-center text-lg-left mt-3 mt-sm-0 d-md-none">
 									<div class="h-sub">Selamat datang di</div>
@@ -271,7 +270,7 @@
 						</a>
 					</div>
 					<div class="col">
-						<a href="" class="counter-box-link">
+						<a href="{{ route('waktupelayanan') }}" class="counter-box-link">
 							<div class="counter-box">
 								<div class="counter-box-icon"><i class="icon-clock"></i></div>
 								<div class="decor"></div>
