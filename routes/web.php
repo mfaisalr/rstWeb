@@ -105,4 +105,7 @@ Route::middleware(['auth'])->group(function () {
 
 // Auth Routes
 require __DIR__.'/auth.php';
-
+Route::get('/migrate', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Migrasi sukses!';
+});
