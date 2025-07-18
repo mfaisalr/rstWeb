@@ -164,32 +164,6 @@
 								<li>
 									<a class="dropdown-item {{ request()->is('admin/rooms/create') ? 'active-page' : '' }}" href="{{ route('rooms.create') }}">Tambah Kamar</a>
 								</li>
-								<li>
-									<a class="dropdown-item {{ request()->is('admin/activity_plans') ? 'active-page' : '' }}" href="{{ route('activity_plans.index') }}">Rencana Kegiatan</a>
-								</li>
-								<li>
-									<a class="dropdown-item {{ request()->is('admin/activity_plans/create') ? 'active-page' : '' }}" href="{{ route('activity_plans.create') }}">Tambah Rencana</a>
-								</li>
-								<li>
-									<a class="dropdown-item {{ request()->is('admin/latest_infos') ? 'active-page' : '' }}" href="{{ route('latest_infos.index') }}">Informasi Terkini</a>
-								</li>
-								<li>
-									<a class="dropdown-item {{ request()->is('admin/latest_infos/create') ? 'active-page' : '' }}" href="{{ route('latest_infos.create') }}">Tambah Informasi </a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="Galeri" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="icon-photo nav-icon"></i>
-								Galeri
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="Galeri">
-								<li>
-									<a class="dropdown-item {{ request()->is('admin/albums') ? 'active-page' : '' }}" href="{{ route('albums.index') }}">Album</a>
-								</li>
-								<li>
-									<a class="dropdown-item {{ request()->is('admin/albums/create') ? 'active-page' : '' }}" href="{{ route('albums.create') }}">Tambah Album</a>
-								</li>
 							</ul>
 						</li>
 						<li class="nav-item dropdown">
@@ -255,13 +229,6 @@
 								<img src="img/hospital/patient.svg" alt="Patients">
 								<p>Dokter</p>
 								<h2>{{$doctor}}</h2>
-							</div>
-						</div>
-						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
-							<div class="hospital-tiles">
-								<img src="img/hospital/operation.svg" alt="Operations" />
-								<p>Album</p>
-								<h2>{{$album}}</h2>
 							</div>
 						</div>
 						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
