@@ -1,7 +1,7 @@
 // Basic DataTable
 $(function(){
 	$('#basicExample').DataTable({
-		'iDisplayLength': 3,
+		'iDisplayLength': 10,
 	});
 });
 

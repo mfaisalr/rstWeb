@@ -15,6 +15,7 @@ Route::get('/', [HomeController::class, 'index'])->name('welcome');
 Route::get('/galeri', [AlbumController::class, 'showGallery'])->name('galeri');
 Route::get('/album/{id}', [AlbumController::class, 'viewAlbum'])->name('albums.view');
 Route::get('info/rencanakegiatan', [ActivityPlanController::class, 'showActivityPlans'])->name('rencanakegiatan');
+Route::get('info/rencanakegiatan/{id}', [ActivityPlanController::class, 'showDetailActivityPlan'])->name('rencanakegiatan.detail');
 Route::get('info/infoterkini', [LatestInfoController::class, 'showLatestInfos'])->name('infoterkini');
 Route::get('info/jadwaldokter', [DoctorScheduleController::class, 'indexHp'])->name('jadwaldokter');
 Route::get('info/infokamar', [RoomController::class, 'infokamar'])->name('infokamar');

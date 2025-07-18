@@ -39,7 +39,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($activityPlans as $activityPlan)
+                        @foreach ($activityPlans->take(5) as $activityPlan)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $activityPlan->activity_date }}</td>

@@ -106,7 +106,6 @@ class ActivityPlanController extends Controller
 
     //EDITOR
 
-    // Display a listing of the activity plans.
     public function indexEditor()
     {
         $activityPlans = ActivityPlan::all();
@@ -194,11 +193,19 @@ class ActivityPlanController extends Controller
         return redirect()->route('activity_plans.index')->with('success', 'Activity Plan successfully deleted.');
     }
 
+
+    // USER HOMEPAGE
     public function showActivityPlansEditor()
     {
         $activityPlans = ActivityPlan::all();
 
         return view('info.rencanakegiatan', compact('activityPlans'));
+    }
+
+        public function showDetailActivityPlan($id)
+    {
+        $activityPlan = ActivityPlan::findOrFail($id);
+        return view('info.detailrencanakegiatan', compact('activityPlan'));
     }
 
 }

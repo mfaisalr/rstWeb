@@ -35,7 +35,7 @@
                             <div class="service-card-photo">
                             </div>
                             <p class="theme-color">{{ \Carbon\Carbon::parse($plan->activity_date)->format('d F Y') }}</p>
-                            <h5 class="service-card-name"><a href="service-page.html">{{ $plan->activity_name }}</a></h5>
+                            <h5 class="service-card-name"><a href="{{ route('rencanakegiatan.detail', $plan->id) }}">{{ $plan->activity_name }}</a></h5>
                             <div class="h-decor"></div>
                             <p>{{ $plan->description }}</p>
                         </div>
