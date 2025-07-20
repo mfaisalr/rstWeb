@@ -73,9 +73,6 @@
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
 									<div class="header-profile-actions">
 										<div class="header-user-profile">
-											<div class="header-user">
-												<img src="img/user11.png" alt="Royal Hospitals Admin Template" />
-											</div>
 											<h5>{{ Auth::user()->name }}</h5>
 											<p>{{ Auth::user()->role }}</p>
 										</div>
@@ -90,7 +87,6 @@
 							</li>
 						</ul>						
 						<!-- Header actions end -->
-
 					</div>
 				</div>
 				<!-- Row end -->
@@ -100,7 +96,6 @@
 		<!-- Header end -->
 
 		<div class="container-fluid p-0">
-
 			<!-- Navigation start -->
 			<nav class="navbar navbar-expand-lg custom-navbar">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#royalHospitalsNavbar" aria-controls="royalHospitalsNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,12 +191,10 @@
 			</nav>
 			<!-- Navigation end -->
 
-
 			<!-- *************
 				************ Main container start *************
 			************* -->
 			<div class="main-container">
-
 
 				<!-- Page header start -->
 				<div class="page-header">
@@ -210,7 +203,6 @@
 					</ol>
 				</div>
 				<!-- Page header end -->
-
 
 				<!-- Content wrapper start -->
 				<div class="content-wrapper">
@@ -296,7 +288,6 @@
 
 				</div>
 				<!-- Content wrapper end -->
-
 
 			</div>
 			<!-- *************

@@ -40,6 +40,15 @@
 									Login RST
 								</a>
 								<h5>Selamat datang,<br />Harap masukkan akun anda.</h5>
+								@if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul class="mb-0">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 								<div class="form-group">
 									<input type="text" class="form-control" name="email" placeholder="Masukkan Alamat Email" />
 								</div>
@@ -51,7 +60,7 @@
 								</div>
 								<hr>
 								<div class="m-0">
-									<span class="additional-link">Tidak ada akun? <a href="signup.html" class="btn btn-secondary">Signup</a></span>
+									<span class="additional-link">Tidak ada akun? <a href="{{ route('register') }}" class="btn btn-secondary">Signup</a></span>
 								</div>
 							</div>
 						</div>

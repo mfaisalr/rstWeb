@@ -62,18 +62,18 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 
-    public static function home()
+    public static function redirectTo()
     {
         $user = Auth::user();
 
-        if ($user->role == 'admin') {
+        if ($user->role === 'admin') {
             return '/admin';
-        } elseif ($user->role == 'editor') {
+        } elseif ($user->role === 'editor') {
             return '/editor';
-        } elseif ($user->role == 'user') {
+        } elseif ($user->role === 'user') {
             return '/user';
         }
 
-        return '/'; // Default redirect jika role tidak dikenali
+        return '/'; 
     }
 }

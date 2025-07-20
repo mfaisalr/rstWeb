@@ -1,69 +1,80 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!doctype html>
+<html lang="en">
+	
+<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+		<!-- Meta -->
+		<meta name="description" content="Responsive Bootstrap4 Dashboard Template">
+		<meta name="author" content="ParkerThemes">
+		<link rel="shortcut icon" href="img/fav.png" />
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+		<!-- Title -->
+		<title>web login rst</title>
+		
+		<!-- *************
+			************ Common Css Files *************
+			************ -->
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+		<!-- Master CSS -->
+		<link rel="stylesheet" href="css/main.css" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
+	</head>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+	<body class="authentication">
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
+		<!-- Container start -->
+		<div class="container">
+			
+			<form method="POST" action="{{ route('register') }}">
+                @csrf
+				<div class="row justify-content-md-center">
+					<div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+						<div class="login-screen">
+							<div class="login-box">
+								<a href="#" class="login-logo">
+									Register RST
+								</a>
+								<h5>Selamat datang,<br />Daftarkan akun anda dengan benar.</h5>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul class="mb-0">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+								<div class="form-group">
+									<input type="text" class="form-control" name="name" placeholder="Masukkan Username" />
+								</div>
+                                <div class="form-group">
+									<input type="text" class="form-control" name="email" placeholder="Masukkan Alamat Email" />
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" name="password" placeholder="Masukkan Password" autocomplete="new-password"/>
+								</div>
+                                <div class="form-group">
+									<input type="password" class="form-control" name="password_confirmation" placeholder="Masukkan Konfirmasi Password"/>
+								</div>
+								<div class="actions">
+									<button type="submit" class="btn btn-primary">Daftar</button>
+								</div>
+								<hr>
+								<div class="m-0">
+									<span class="additional-link">Sudah ada akun? <a href="{{ route('login') }}" class="btn btn-secondary">Login</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+		</div>
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div>
-                <label for="role">Role</label>
-                <select name="role" id="role" required>
-                    <option value="user">User</option>
-                    <option value="editor">Editor</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+	</body>
+</html>

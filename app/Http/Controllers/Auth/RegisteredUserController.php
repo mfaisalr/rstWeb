@@ -37,20 +37,28 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'role' => ['required', 'string', 'in:user,editor,admin'],
+            'role' => ['string', 'in:user,editor,admin'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => $request->role,
+            'role' => 'user',
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        if ($user->role === 'admin') {
+            return redirect('/admin');
+        } elseif ($user->role === 'editor') {
+            return redirect('/editor');
+        } elseif ($user->role === 'user') {
+            return redirect('/user');
+        }
+        
+        return redirect('/');;
     }
 }
