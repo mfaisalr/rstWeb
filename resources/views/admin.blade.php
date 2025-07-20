@@ -68,7 +68,7 @@
 							<li class="dropdown">
 								<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
 									<span class="user-name">{{ Auth::user()->name }}</span>
-									<span class="avatar">NR<span class="status busy"></span></span>
+									<span class="avatar">ADM<span class="status busy"></span></span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
 									<div class="header-profile-actions">

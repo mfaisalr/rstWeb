@@ -72,14 +72,11 @@
 							<li class="dropdown">
 								<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
 									<span class="user-name">{{ Auth::user()->name }}</span>
-									<span class="avatar">NR<span class="status busy"></span></span>
+									<span class="avatar">USR<span class="status busy"></span></span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
 									<div class="header-profile-actions">
 										<div class="header-user-profile">
-											<div class="header-user">
-												<img src="../img/user11.png" alt="Royal Hospitals Admin Template" />
-											</div>
 											<h5>{{ Auth::user()->name }}</h5>
 											<p>{{ Auth::user()->role }}</p>
 										</div>
