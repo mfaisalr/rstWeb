@@ -41,16 +41,6 @@
 				</ul>
 			</div>
 		</div>
-		<div class="header-mobile-top">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-3">
-						<div class="header-mobile-info-toggle js-info-toggle"></div>
-					</div>
-					<div class="col-auto header-button-wrap ml-auto"><a href="#" class="btn" data-toggle="modal" data-target="#modalBookingForm"><i class="icon-right-arrow"></i>APPOINTMENT<i class="icon-right-arrow"></i></a></div>
-				</div>
-			</div>
-		</div>
 		<div class="header-topline d-none d-lg-flex">
 			<div class="container">
 				<div class="row align-items-center">
@@ -93,46 +83,44 @@
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/profile">Profile</a></li>
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/sejarah">Sejarah</a></li>
 												<li><a class="dropdown-item" href="../../../tentang_kami/detail/visimisi">Visi dan Misi</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/strukturorganisasi">Struktur Organisasi</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/maklumatpelayanan">Maklumat Pelayanan</a></li>
-												<li><a class="dropdown-item" href="../../../tentang_kami/detail/standarpelayanan">Standar Pelayanan</a></li>
+												<li><a class="dropdown-item" href="../../../tentang_kami/detail/waktupelayanan">Waktu Pelayanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
 											<a href="gallery.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Info</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="gallery.html">Creative Gallery</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Simple Gallery</a></li>
+												<li><a class="dropdown-item" href="{{ route('rencanakegiatan') }}">Rencana Kegiatan</a></li>
+												<li><a class="dropdown-item" href="{{ route('infoterkini') }}">Info Terkini</a></li>
+												<li><a class="dropdown-item" href="{{ route('infolayanan') }}">Info Layanan</a></li>
 											</ul>
 										</li>
 										<li class="nav-item">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Fasilitas</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="our-specialist.html">All Specialists</a></li>
-												<li><a class="dropdown-item" href="doctor-page.html">Doctor Page</a></li>
-												<li><a class="dropdown-item" href="schedule.html">Schedule Table</a></li>
+												<li><a class="dropdown-item" href="{{ route('fasilitaspelayanan') }}">Fasilitas Pelayanan</a></li>
+												<li><a class="dropdown-item" href="{{ route('fasilitasinstalasi') }}">Fasilitas Instalasi</a></li>
+												<li><a class="dropdown-item" href="{{ route('unggulan') }}">Unggulan</a></li>
 											</ul>
 										</li>										
 										<li class="nav-item">
-											<a class="nav-link" href="/galeri">Galeri</a>
-										</li>
-										<li class="nav-item dropdown">
-											<a href="blog.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Akreditasi</a>
-											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="blog.html">Blog Posts</a></li>
-												<li><a class="dropdown-item" href="blog-grid.html">Blog Grid Posts</a></li>
-												<li><a class="dropdown-item" href="blog-post-page.html">Blog Single Post</a></li>
-											</ul>
+											<a class="nav-link" href="{{ route('galeri') }}">Galeri</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="contact.html">PPID</a>
+											<a class="nav-link" href="{{ route('akreditasi') }}">Akreditasi</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('ppid') }}">PPID</a>
 										</li>
                                         <li class="nav-item">
-											<a class="nav-link" href="contact.html">WBS</a>
+											<a class="nav-link" href="{{ route('wbs') }}">WBS</a>
 										</li>
-                                        <li class="nav-item">
-											<a class="nav-link" href="contact.html">WBK/WBBM</a>
+                                      	<li class="nav-item">
+											<a class="nav-link" href="{{ route('wbkwbbm') }}">WBK/WBBM</a>
 										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="{{ route('login') }}" style="color: #49b0c1;">Login</a>
+										</li>
+									</ul>
 								</div>
 							</nav>
 						</div>
@@ -189,7 +177,7 @@
 					<div class="row flex-column flex-md-row flex-lg-column">
 						<div class="col-md col-lg-auto">
 							<div class="footer-logo">
-								<img src="images/footer-logo.png" alt="" class="img-fluid">
+								<img src="../images/footer-logo.png" alt="" class="img-fluid">
 							</div>
 							<div class="mt-2 mt-lg-0"></div>
 							<div class="footer-social d-lg-none">
@@ -223,21 +211,21 @@
 					<h3>Blog Posts</h3>
 					<div class="h-decor"></div>
 					<div class="footer-post d-flex">
-						<div class="footer-post-photo"><img src="images/content/footer-post-author-03.jpg" alt="" class="img-fluid"></div>
+						<div class="footer-post-photo"><img src="../images/content/footer-post-author-03.jpg" alt="" class="img-fluid"></div>
 						<div class="footer-post-text">
 							<div class="footer-post-title"><a href="post.html">Medications & Oral Health</a></div>
 							<p>September 26, 2018</p>
 						</div>
 					</div>
 					<div class="footer-post d-flex">
-						<div class="footer-post-photo"><img src="images/content/footer-post-author-01.jpg" alt="" class="img-fluid"></div>
+						<div class="footer-post-photo"><img src="../images/content/footer-post-author-01.jpg" alt="" class="img-fluid"></div>
 						<div class="footer-post-text">
 							<div class="footer-post-title"><a href="post.html">Smile For Your Health!</a></div>
 							<p>August 22, 2018</p>
 						</div>
 					</div>
 					<div class="footer-post d-flex">
-						<div class="footer-post-photo"><img src="images/content/footer-post-author-02.jpg" alt="" class="img-fluid"></div>
+						<div class="footer-post-photo"><img src="../images/content/footer-post-author-02.jpg" alt="" class="img-fluid"></div>
 						<div class="footer-post-text">
 							<div class="footer-post-title"><a href="post.html">Tooth Fairy Traditions...</a></div>
 							<p>July 25, 2018</p>
@@ -248,13 +236,13 @@
 					<h3>Our Contacts</h3>
 					<div class="h-decor"></div>
 					<ul class="icn-list">
-						<li><i class="icon-placeholder2"></i>1560 Holden Street San Diego, CA 92139
+						<li><i class="icon-placeholder2"></i>Jl. Tanjungpura I, Klandasan Ulu, Balikpapan, Kalimantan Timur  76111 
 							<br>
-							<a href="contact.html" class="btn btn-xs btn-gradient"><i class="icon-placeholder2"></i><span>Get directions on the map</span><i class="icon-right-arrow"></i></a>
+							<a href="https://maps.app.goo.gl/FHJMeD7NzfWmi5ih6" class="btn btn-xs btn-gradient"><i class="icon-placeholder2"></i><span>Get directions on the map</span><i class="icon-right-arrow"></i></a>
 						</li>
-						<li><i class="icon-telephone"></i><b><span class="phone"><span class="text-nowrap">1-800-267-0000</span>, <span class="text-nowrap">1-800-267-0001</span></span></b>
+						<li><i class="icon-telephone"></i><b><span class="phone"><span class="text-nowrap">(0542) 414333 / FAX (0542) 415677</span></span></b>
 							<br>(24/7 General inquiry)</li>
-						<li><i class="icon-black-envelope"></i><a href="mailto:info@dentco.net">info@dentco.net</a></li>
+						<li><i class="icon-black-envelope"></i><a href="mailto:rstbalikpapan@gmail.com">rstbalikpapan@gmail.com</a></li>
 					</ul>
 				</div>
 			</div>
@@ -262,103 +250,9 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row text-center text-md-left">
-					<div class="col-sm">Copyright © 2018 <a href="#">DentCo</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<div class="col-sm">Copyright © 2025 <a href="#">rstbalikpapan</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
 						<a href="#">Privacy Policy</a></div>
-					<div class="col-sm-auto ml-auto"><span class="d-none d-sm-inline">For emergency cases&nbsp;&nbsp;&nbsp;</span><i class="icon-telephone"></i>&nbsp;&nbsp;<b>1-800-267-0000</b></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--//footer-->
-	<div class="backToTop js-backToTop">
-		<i class="icon icon-up-arrow"></i>
-	</div>
-	<div class="modal modal-form fade" id="modalBookingForm">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<button aria-label='Close' class='close' data-dismiss='modal'>
-					<i class="icon-error"></i>
-				</button>
-				<div class="modal-body">
-					<div class="modal-form">
-						<h3>Book an Appointment</h3>
-						<form class="mt-15" id="bookingForm" method="post" novalidate="novalidate">
-							<div class="successform">
-								<p>Your message was sent successfully!</p>
-							</div>
-							<div class="errorform">
-								<p>Something went wrong, try refreshing and submitting the form again.</p>
-							</div>
-							<div class="input-group">
-								<span>
-								<i class="icon-user"></i>
-							</span>
-								<input type="text" name="bookingname" class="form-control" autocomplete="off" placeholder="Your Name*" />
-							</div>
-							<div class="row row-xs-space mt-1">
-								<div class="col-sm-6">
-									<div class="input-group">
-										<span>
-											<i class="icon-email2"></i>
-										</span>
-										<input type="text" name="bookingemail" class="form-control" autocomplete="off" placeholder="Your Email*" />
-									</div>
-								</div>
-								<div class="col-sm-6 mt-1 mt-sm-0">
-									<div class="input-group">
-										<span>
-											<i class="icon-smartphone"></i>
-										</span>
-										<input type="text" name="bookingphone" class="form-control" autocomplete="off" placeholder="Your Phone" />
-									</div>
-								</div>
-							</div>
-							<div class="row row-xs-space mt-1">
-								<div class="col-sm-6">
-									<div class="input-group">
-										<span>
-											<i class="icon-birthday"></i>
-										</span>
-										<input type="text" name="bookingage" class="form-control" autocomplete="off" placeholder="Your age" />
-									</div>
-								</div>
-							</div>
-							<div class="selectWrapper input-group mt-1">
-								<span>
-									<i class="icon-tooth"></i>
-								</span>
-								<select name="bookingservice" class="form-control">
-									<option selected="selected" disabled="disabled">Select Service</option>
-									<option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-									<option value="General Dentistry">General Dentistry</option>
-									<option value="Orthodontics">Orthodontics</option>
-									<option value="Children`s Dentistry">Children`s Dentistry</option>
-									<option value="Dental Implants">Dental Implants</option>
-									<option value="Dental Emergency">Dental Emergency</option>
-								</select>
-							</div>
-							<div class="input-group flex-nowrap mt-1">
-								<span>
-									<i class="icon-calendar2"></i>
-								</span>
-								<div class="datepicker-wrap">
-									<input name="bookingdate" type="text" class="form-control datetimepicker" placeholder="Date" readonly="readonly">
-								</div>
-							</div>
-							<div class="input-group flex-nowrap mt-1">
-								<span>
-									<i class="icon-clock"></i>
-								</span>
-								<div class="datepicker-wrap">
-									<input name="bookingtime" type="text" class="form-control timepicker" placeholder="Time">
-								</div>
-							</div>
-							<textarea name="bookingmessage" class="form-control" placeholder="Your comment"></textarea>
-							<div class="text-right mt-2">
-								<button type="submit" class="btn btn-sm btn-hover-fill">Book now</button>
-							</div>
-						</form>
-					</div>
+					<div class="col-sm-auto ml-auto"><span class="d-none d-sm-inline">For emergency cases&nbsp;&nbsp;&nbsp;</span><i class="icon-telephone"></i>&nbsp;&nbsp;<b>(0542) 414333</b></div>
 				</div>
 			</div>
 		</div>

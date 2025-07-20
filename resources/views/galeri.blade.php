@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +7,16 @@
 	<meta name="description" content="html 5 template, dentist, stomatologist, dental clinic template, medical template, clinic template, surgery clinic theme, plastic surgery template">
 	<meta name="author" content="websmirno.site">
 	<meta name="format-detection" content="telephone=no">
-	<title>Website resmi rst balikpapan</title>
+	<title>Medin - HTML Website Template</title>
 	<!-- Stylesheets -->
-	<link href="../../../vendor/slick/slick.css" rel="stylesheet">
-	<link href="../../../vendor/animate/animate.min.css" rel="stylesheet">
-	<link href="../../../icons/style.css" rel="stylesheet">
-	<link href="../../../vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
-	<link href="../../../css/style.css" rel="stylesheet">
-    <link href="../../../color/color.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-
+	<link href="vendor/slick/slick.css" rel="stylesheet">
+	<link href="vendor/animate/animate.min.css" rel="stylesheet">
+	<link href="icons/style.css" rel="stylesheet">
+	<link href="vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <link href="color/color.css" rel="stylesheet">
 <!--Favicon-->
-	<link rel="icon" href="../../../images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
@@ -28,7 +24,8 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true&amp;libraries=places"></script>
 </head>
 
-<body>	
+<body class="shop-page">	
+
 <!--header-->
 <header class="header">
 		<div class="header-mobile-info">
@@ -42,16 +39,6 @@
 					<li><i class="icon-clock"></i>Senin - Jumat : 07.00 - 15.00
 						<br> Sabtu - Minggu : Tutup</li>
 				</ul>
-			</div>
-		</div>
-		<div class="header-mobile-top">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-3">
-						<div class="header-mobile-info-toggle js-info-toggle"></div>
-					</div>
-					<div class="col-auto header-button-wrap ml-auto"><a href="#" class="btn" data-toggle="modal" data-target="#modalBookingForm"><i class="icon-right-arrow"></i>APPOINTMENT<i class="icon-right-arrow"></i></a></div>
-				</div>
 			</div>
 		</div>
 		<div class="header-topline d-none d-lg-flex">
@@ -137,35 +124,36 @@
 								</div>
 							</nav>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-
-
-<div class="page-content">
-    <div class="section mt-0">
-        <div class="breadcrumbs-wrap">
-            <div class="container">
-                <div class="breadcrumbs">
-                    <a href="/" style="text-decoration: none;">Beranda</a>
-                    <span>Galeri</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section page-content-first">
-        <div class="container">
-            <div class="text-center mb-2 mb-md-3 mb-lg-4">
-                <div class="h-sub theme-color">Album</div>
-                <h1>Galeri Foto dan Video</h1>
-                <div class="h-decor"></div>
-            </div>
-
-			<div class="gallery-specialist gallery-isotope" id="gallery-specialist">
-                @foreach ($albums as $album)
+	<!--//header-->
+	<div class="page-content">
+		<!--section-->
+		<div class="section mt-0">
+			<div class="breadcrumbs-wrap">
+				<div class="container">
+					<div class="breadcrumbs">
+						<a href="/">Beranda</a>
+						<span>Galeri</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--//section-->
+		<!--section-->
+		<div class="section page-content-first">
+			<div class="container">
+				<div class="text-center mb-2  mb-md-3 mb-lg-4">
+					<div class="h-sub theme-color">Album</div>
+					<h1>Galeri Foto dan Video</h1>
+					<div class="h-decor"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="gallery-specialist gallery-isotope" id="gallery-specialist">
+					@foreach ($albums as $album)
 					<div class="gallery-item category1">
 						<div class="doctor-box text-center">
 							<div class="doctor-box-photo">
@@ -194,11 +182,11 @@
 						</div>
 					</div>
                 @endforeach
+				</div>
 			</div>
-        </div>
+		</div>
+		<!--//section-->
 	</div>
-</div>
-</body>
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
@@ -207,7 +195,7 @@
 					<div class="row flex-column flex-md-row flex-lg-column">
 						<div class="col-md col-lg-auto">
 							<div class="footer-logo">
-								<img src="../../../images/footer-logo.png" alt="" class="img-fluid">
+								<img src="../images/footer-logo.png" alt="" class="img-fluid">
 							</div>
 							<div class="mt-2 mt-lg-0"></div>
 							<div class="footer-social d-lg-none">
@@ -287,7 +275,6 @@
 			</div>
 		</div>
 	</div>
-	<!--//footer-->
 	<!-- Vendors -->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
@@ -304,8 +291,13 @@
 	<script src="vendor/countTo/jquery.countTo.js"></script>
 	<script src="vendor/form-validation/jquery.form.js"></script>
 	<script src="vendor/form-validation/jquery.validate.min.js"></script>
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
 	<!-- Custom Scripts -->
 	<script src="js/app.js"></script>
     <script src="color/color.js"></script>
 
+	<script src="js/app-shop.js"></script>
+	<script src="form/forms.js"></script>
+	
+</body>
 </html>

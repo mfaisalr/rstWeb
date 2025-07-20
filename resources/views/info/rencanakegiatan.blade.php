@@ -2,9 +2,7 @@
 
 @section('content')
 
-<!--//header-->
 <div class="page-content">
-		<!--section-->
 		<div class="section mt-0">
 			<div class="breadcrumbs-wrap">
 				<div class="container">
@@ -16,9 +14,7 @@
 				</div>
 			</div>
 		</div>
-		<!--//section-->
 
-		<!--section-->
 		<div class="section page-content-first">
 			<div class="container">
 				<div class="text-center mb-2  mb-md-3 mb-lg-4">
@@ -44,7 +40,6 @@
 				</div>
 			</div>
 		</div>
-		<!--//section-->
 	</div>
 
 @endsection
