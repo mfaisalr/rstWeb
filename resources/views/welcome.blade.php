@@ -67,7 +67,6 @@
 					<div class="col-3">
 						<div class="header-mobile-info-toggle js-info-toggle"></div>
 					</div>
-					<!-- <div class="col-auto header-button-wrap ml-auto"><a href="#" class="btn" data-toggle="modal" data-target="#modalBookingForm"><i class="icon-right-arrow"></i>APPOINTMENT<i class="icon-right-arrow"></i></a></div> -->
 				</div>
 			</div>
 		</div>
