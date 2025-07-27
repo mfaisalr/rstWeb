@@ -22,6 +22,7 @@
 
 		<!-- Main css -->
 		<link rel="stylesheet" href="../../css/main.css">
+		
 
 	</head>
 	<body>
@@ -130,7 +131,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="Patients" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="icon-folder nav-icon"></i>
-								Pasien
+								Pasien Temu Janji
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="Patients">
 								<li>
@@ -177,6 +178,8 @@
 
 		<!-- Main Js Required -->
 		<script src="../../js/main.js"></script>
+
+		
 
 	</body>
 </html>

@@ -133,6 +133,7 @@
 								</div>
 							</nav>
 						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -291,21 +292,21 @@
 		<i class="icon icon-up-arrow"></i>
 	</div>
 	<!-- Vendors -->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
-	<script src="vendor/cookie/jquery.cookie.js"></script>
-	<script src="vendor/bootstrap-datetimepicker/moment.js"></script>
-	<script src="vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-	<script src="vendor/popper/popper.min.js"></script>
-	<script src="vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-	<script src="vendor/waypoints/sticky.min.js"></script>
-	<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-	<script src="vendor/slick/slick.min.js"></script>
-	<script src="vendor/scroll-with-ease/jquery.scroll-with-ease.min.js"></script>
-	<script src="vendor/countTo/jquery.countTo.js"></script>
-	<script src="vendor/form-validation/jquery.form.js"></script>
-	<script src="vendor/form-validation/jquery.validate.min.js"></script>
+	<script src="../../../vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../vendor/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../../../vendor/cookie/jquery.cookie.js"></script>
+	<script src="../../../vendor/bootstrap-datetimepicker/moment.js"></script>
+	<script src="../../../vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../../vendor/popper/popper.min.js"></script>
+	<script src="../../../vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="../../../vendor/waypoints/jquery.waypoints.min.js"></script>
+	<script src="../../../vendor/waypoints/sticky.min.js"></script>
+	<script src="../../../vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="../../../vendor/slick/slick.min.js"></script>
+	<script src="../../../vendor/scroll-with-ease/jquery.scroll-with-ease.min.js"></script>
+	<script src="../../../vendor/countTo/jquery.countTo.js"></script>
+	<script src="../../../vendor/form-validation/jquery.form.js"></script>
+	<script src="../../../vendor/form-validation/jquery.validate.min.js"></script>
 	<!-- Custom Scripts -->
 	<script src="js/app.js"></script>
     <script src="color/color.js"></script>

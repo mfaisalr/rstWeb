@@ -107,14 +107,53 @@ class HomeController extends Controller
     }
 
 
-    public function editor()
+    public function editor(Request $request)
     {
         $latest_infos = LatestInfo::count();
         $activity_plan = ActivityPlan::count();
         $album = Album::count();
 
+    $selectedYear = $request->input('year', date('Y'));
+
+    $years = DB::table('activity_plans')
+        ->select(DB::raw('YEAR(created_at) as year'))
+        ->distinct()
+        ->pluck('year');
+
+    // Fungsi ambil data berdasarkan tahun
+    $activityPlanByMonth = DB::table('activity_plans')
+        ->select(DB::raw('MONTH(created_at) as month'), DB::raw('COUNT(*) as total'))
+        ->whereYear('created_at', $selectedYear)
+        ->groupBy(DB::raw('MONTH(created_at)'))
+        ->pluck('total', 'month')->all();
+
+    $latestInfoByMonth = DB::table('latest_infos')
+        ->select(DB::raw('MONTH(created_at) as month'), DB::raw('COUNT(*) as total'))
+        ->whereYear('created_at', $selectedYear)
+        ->groupBy(DB::raw('MONTH(created_at)'))
+        ->pluck('total', 'month')->all();
+
+    $albumByMonth = DB::table('albums')
+        ->select(DB::raw('MONTH(created_at) as month'), DB::raw('COUNT(*) as total'))
+        ->whereYear('created_at', $selectedYear)
+        ->groupBy(DB::raw('MONTH(created_at)'))
+        ->pluck('total', 'month')->all();
+
+    $months = range(1, 12);
+    $labels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+
+    $activityPlanData = [];
+    $latestInfoData = [];
+    $albumData = [];
+
+    foreach ($months as $month) {
+        $activityPlanData[] = $activityPlanByMonth[$month] ?? 0;
+        $latestInfoData[] = $latestInfoByMonth[$month] ?? 0;
+        $albumData[] = $albumByMonth[$month] ?? 0;
+    }
+
         return view('editor', compact(
-            'latest_infos', 'activity_plan', 'album'
+            'latest_infos', 'activity_plan', 'album', 'labels', 'activityPlanData', 'latestInfoData', 'albumData', 'years', 'selectedYear'
         ));
     }
 
@@ -135,7 +174,24 @@ class HomeController extends Controller
                                       ->where('status', 'pending')
                                       ->count();
 
-    return view('user', compact('patientCount', 'futureAppointmentsCount', 'completedAppointmentsCount', 'pendingAppointmentsCount'));
+    $userId = Auth::id();
+
+    // Inisialisasi array 12 bulan dengan nilai 0
+    $monthlyPatientCounts = array_fill(0, 12, 0);
+
+    // Ambil semua pasien milik user yang sedang login, dikelompokkan berdasarkan bulan
+    $patients = Patient::selectRaw('MONTH(created_at) as month, COUNT(*) as total')
+        ->where('user_id', $userId)
+        ->groupByRaw('MONTH(created_at)')
+        ->get();
+
+    // Isi array berdasarkan hasil query
+    foreach ($patients as $patient) {
+        $monthIndex = $patient->month - 1; // Karena array dimulai dari index 0
+        $monthlyPatientCounts[$monthIndex] = $patient->total;
+    }                            
+
+    return view('user', compact('patientCount', 'futureAppointmentsCount', 'completedAppointmentsCount', 'pendingAppointmentsCount', 'monthlyPatientCounts'));
 }
 
     public function index()
