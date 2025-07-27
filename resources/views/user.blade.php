@@ -46,7 +46,7 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
-						<a href="{{ route('patients.index') }}" class="tile-button">
+						<a href="{{ route('patients.upcomingPatients') }}" class="tile-button">
 							<div class="hospital-tiles">
 								<img src="img/hospital/appointment.svg" alt="Appointments" />
 								<p>Temu Janji Sedang Berjalan</p>
@@ -55,7 +55,7 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
-						<a href="{{ route('patients.index') }}" class="tile-button">
+						<a href="{{ route('patients.pendingPatients') }}" class="tile-button">
 							<div class="hospital-tiles">
 								<img src="img/hospital/appointment.svg" alt="Doctors" />
 								<p>Menunggu Temu Janji</p>
@@ -64,7 +64,7 @@
 						</a>
 					</div>
 					<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
-						<a href="{{ route('patients.index') }}" class="tile-button">
+						<a href="{{ route('patients.historyPatients') }}" class="tile-button">
 							<div class="hospital-tiles">
 								<img src="img/hospital/appointment.svg" alt="Operations" />
 								<p>Temu Janji Selesai</p>

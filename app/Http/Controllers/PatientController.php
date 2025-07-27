@@ -224,7 +224,7 @@ public function reschedule(Request $request, $id)
         }
     
         $patients = Patient::where('user_id', Auth::id())
-                           ->whereIn('status', ['Accepted', 'Rescheduled', 'Pending'])
+                           ->whereIn('status', ['Accepted', 'Rescheduled'])
                            ->where('examination_datetime', '>', now())
                            ->orderBy('examination_datetime')
                            ->get();
@@ -255,5 +255,15 @@ public function reschedule(Request $request, $id)
 
     return view('info.antrianpoliklinik', compact('data'));
 }
+
+    public function pendingPatients()
+    {
+        $patients = Patient::where('user_id', Auth::id())
+                       ->where('status', 'Pending')
+                       ->orderBy('examination_datetime', 'desc')
+                       ->get();
+
+        return view('user.patients.pendingPatients', compact('patients'));
+    }
 
 }

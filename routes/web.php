@@ -101,6 +101,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/patients', [PatientController::class, 'userIndex'])->name('patients.index');
         Route::get('/patients/upcomingPatients', [PatientController::class, 'upcomingPatients'])->name('patients.upcomingPatients');
         Route::get('/patients/historyPatients', [PatientController::class, 'historyPatients'])->name('patients.historyPatients');
+        Route::get('/patients/pendingPatients', [PatientController::class, 'pendingPatients'])->name('patients.pendingPatients');
         Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');
         Route::post('/patients', [PatientController::class, 'store'])->name('patients.store');
         Route::get('/patients/{patient}', [PatientController::class, 'show'])->name('patients.show');

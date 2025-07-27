@@ -128,7 +128,7 @@
 						    	Data Pasien
 							</a>
 						</li> -->
-						<li class="nav-item dropdown">
+						<!-- <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="Patients" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="icon-folder nav-icon"></i>
 								Pasien Temu Janji
@@ -141,7 +141,7 @@
 									<a class="dropdown-item {{ request()->is('user/historyPatients') ? 'active-page' : '' }}" href="{{ route('patients.historyPatients') }}">Riwayat Pendaftaran</a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</nav>
