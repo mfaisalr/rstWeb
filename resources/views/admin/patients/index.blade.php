@@ -58,17 +58,34 @@
                                         </td>
                                         <td>{{ $patient->status }}</td>
                                         <td>
-                                            @if ($patient->status === 'Pending')
+                                            @if (in_array($patient->status, ['accepted', 'reschedule']))
+                                                <span class="badge badge-success" style="font-size: 11px;">Accepted</span>
+                                                <!-- Trigger Button for Modal -->
+                                                <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#rescheduleModal-{{ $patient->id }}">Reschedule</button>
+                                            @elseif ($patient->status === 'pending')
                                                 <form action="{{ route('patients.accept-registration', $patient->id) }}" method="POST" style="display:inline;">
                                                     @csrf
                                                     <button type="submit" class="badge badge-primary" style="border: none; font-size: 11px;">Konfirmasi Pasien</button>
                                                 </form>
+                                            @elseif ($patient->status == 'completed')
+                                                <span class="badge badge-success" style="font-size: 11px;">{{ $patient->status }}</span>
                                             @else
-                                                <span class="badge badge-success" style="font-size: 11px;">Accepted</span>
-                                                <!-- Trigger Button for Modal -->
-                                                <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#rescheduleModal-{{ $patient->id }}">Reschedule</button>
+                                                <span class="badge badge-primary" style="font-size: 11px;">{{ ucfirst($patient->status) }}</span>
+                                            @endif
+
+                                            @if ($patient->status === 'cancel_requested')
+                                                <form action="{{ route('patients.cancel.approve', $patient->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-success btn-sm">Setujui</button>
+                                                </form>
+
+                                                <form action="{{ route('patients.cancel.reject', $patient->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-danger btn-sm">Tolak</button>
+                                                </form>
                                             @endif
                                         </td>
+
                                     </tr>
 
                                     <!-- Reschedule Modal -->

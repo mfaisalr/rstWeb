@@ -6,7 +6,7 @@
     <div class="page-header">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Pasien</li>
-            <li class="breadcrumb-item active">Data Pasien</li>
+            <li class="breadcrumb-item active">Riwayat Pendaftaran</li>
         </ol>
     </div>
     <!-- Page header end -->
@@ -63,21 +63,15 @@
                                                 <span class="badge badge-info">{{ $patient->status }}</span>
                                             @elseif($patient->status == 'Accepted')
                                                 <span class="badge badge-success">{{ $patient->status }}</span>
+                                            @elseif($patient->status == 'Completed')
+                                                <span class="badge badge-primary">{{ $patient->status }}</span>
                                             @else
                                                 <span>{{ $patient->status }}</span>
                                             @endif
                                         </td>
                                         <td>
                                             <a href="{{ route('patients.show', $patient->id) }}" class="btn btn-primary">View</a>
-                                        
-                                            @if(in_array(strtolower($patient->status), ['pending', 'reschedule', 'accepted']))
-                                                <form action="{{ route('patients.cancel', $patient->id) }}" method="POST" class="mt-1" onsubmit="return confirm('Ajukan pembatalan temu janji ini ke admin?');">
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-warning btn-sm">Ajukan Pembatalan</button>
-                                                </form>
-                                            @endif
                                         </td>
-
                                     </tr>
                                 @endforeach
                             </tbody>

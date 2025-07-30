@@ -9,6 +9,7 @@ use App\Http\Controllers\{
 use App\Models\Album;
 use App\Models\DoctorsSchedule;
 use App\Models\LatestInfo;
+use App\Models\Patient;
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
@@ -72,6 +73,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/patients', [PatientController::class, 'adminIndex'])->name('admin.patients.index');
         Route::post('/patients/{patient}/accept', [PatientController::class, 'acceptRegistration'])->name('patients.accept-registration');
         Route::patch('/patients/{patient}/reschedule', [PatientController::class, 'reschedule'])->name('patients.reschedule');
+        Route::post('/cancel/approve/{id}', [PatientController::class, 'approveCancellation'])->name('patients.cancel.approve');
+        Route::post('/cancel/reject/{id}', [PatientController::class, 'rejectCancellation'])->name('patients.cancel.reject');
+
     });
 
     // Editor Routes
@@ -102,9 +106,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/patients/upcomingPatients', [PatientController::class, 'upcomingPatients'])->name('patients.upcomingPatients');
         Route::get('/patients/historyPatients', [PatientController::class, 'historyPatients'])->name('patients.historyPatients');
         Route::get('/patients/pendingPatients', [PatientController::class, 'pendingPatients'])->name('patients.pendingPatients');
+        Route::get('/patients/cancelledPatients', [PatientController::class, 'cancelledPatients'])->name('patients.cancelledPatients');
         Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');
         Route::post('/patients', [PatientController::class, 'store'])->name('patients.store');
         Route::get('/patients/{patient}', [PatientController::class, 'show'])->name('patients.show');
+        Route::post('/request-cancel/{id}', [PatientController::class, 'requestCancelAppointment'])->name('patients.cancel');
     });
 });
 

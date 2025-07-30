@@ -72,6 +72,15 @@
 							</div>
 						</a>
 					</div>
+					<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
+						<a href="{{ route('patients.cancelledPatients') }}" class="tile-button">
+							<div class="hospital-tiles">
+								<img src="img/hospital/appointment.svg" alt="Operations" />
+								<p>Batal Temu Janji</p>
+								<h2>{{ $cancelledAppointmentsCount }}</h2>
+							</div>
+						</a>
+					</div>
 				</div>
 
 				<div class="card">

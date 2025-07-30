@@ -197,7 +197,7 @@ public function reschedule(Request $request, $id)
         }
 
         $patient->examination_datetime = $newDate->setTimeFrom($nextSlotTime);
-        $patient->status = 'Rescheduled';
+        $patient->status = 'reschedule';
         $patient->save();
 
         return redirect()->back()->with('success', 'Patient rescheduled successfully.');
@@ -265,5 +265,64 @@ public function reschedule(Request $request, $id)
 
         return view('user.patients.pendingPatients', compact('patients'));
     }
+
+    public function requestCancelAppointment($id)
+{
+    $appointment = Patient::where('id', $id)
+                          ->where('user_id', Auth::id())
+                          ->first();
+
+    if (!$appointment) {
+        return redirect()->back()->with('error', 'Temu janji tidak ditemukan.');
+    }
+
+    if ($appointment->status !== 'Scheduled' && $appointment->status !== 'Pending') {
+        return redirect()->back()->with('error', 'Temu janji tidak bisa dibatalkan.');
+    }
+
+    $appointment->status = 'Menunggu Persetujuan Pembatalan';
+    $appointment->save();
+
+    return redirect()->back()->with('success', 'Permintaan pembatalan dikirim ke admin.');
+}
+
+public function cancellationRequests()
+{
+    $requests = Patient::where('status', 'Menunggu Persetujuan Pembatalan')
+                        ->orderBy('examination_datetime', 'desc')
+                        ->get();
+
+    return view('admin.cancellationRequests', compact('requests'));
+}
+
+public function approveCancellation($id)
+{
+    $appointment = Patient::findOrFail($id);
+    $appointment->status = 'Cancelled';
+    $appointment->save();
+
+    return back()->with('success', 'Pembatalan disetujui.');
+}
+
+public function rejectCancellation($id)
+{
+    $appointment = Patient::findOrFail($id);
+    $appointment->status = 'Pembatalan Ditolak';
+    $appointment->save();
+
+    return back()->with('success', 'Pembatalan ditolak.');
+}
+
+    public function cancelledPatients()
+    {
+        $patients = Patient::where('user_id', Auth::id())
+                       ->where('status', 'cancelled')
+                       ->orderBy('examination_datetime', 'desc')
+                       ->get();
+
+        return view('user.patients.cancelledPatients', compact('patients'));
+    }
+
+
 
 }

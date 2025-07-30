@@ -174,6 +174,10 @@ class HomeController extends Controller
                                       ->where('status', 'pending')
                                       ->count();
 
+    $cancelledAppointmentsCount = Patient::where('user_id', Auth::id())
+                                      ->where('status', 'cancelled')
+                                      ->count();
+
     $userId = Auth::id();
 
     // Inisialisasi array 12 bulan dengan nilai 0
@@ -191,7 +195,7 @@ class HomeController extends Controller
         $monthlyPatientCounts[$monthIndex] = $patient->total;
     }                            
 
-    return view('user', compact('patientCount', 'futureAppointmentsCount', 'completedAppointmentsCount', 'pendingAppointmentsCount', 'monthlyPatientCounts'));
+    return view('user', compact('patientCount', 'futureAppointmentsCount', 'completedAppointmentsCount', 'pendingAppointmentsCount', 'monthlyPatientCounts', 'cancelledAppointmentsCount'));
 }
 
     public function index()
